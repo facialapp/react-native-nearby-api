@@ -228,7 +228,7 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/../../../ios/Pods/**",
+					"$(PROJECT_DIR)/../../../ios/Pods/Headers/Public/**",
 					"$(PROJECT_DIR)/../../../ios/Frameworks/**",
 				);
 				HEADER_SEARCH_PATHS = (
@@ -253,7 +253,7 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/../../../ios/Pods/**",
+					"$(PROJECT_DIR)/../../../ios/Pods/Headers/Public/**",
 					"$(PROJECT_DIR)/../../../ios/Frameworks/**",
 				);
 				HEADER_SEARCH_PATHS = (
