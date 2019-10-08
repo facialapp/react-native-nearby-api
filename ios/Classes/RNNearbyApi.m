@@ -189,6 +189,12 @@ RCT_EXPORT_METHOD(publish:(nonnull NSString *)messageString) {
         // Create new message
         GNSMessage *message = [GNSMessage messageWithContent: [messageString dataUsingEncoding: NSUTF8StringEncoding]];
         publication = [[self sharedMessageManager] publicationWithMessage: message paramsBlock:^(GNSPublicationParams *params) {
+            params.permissionRequestHandler = ^(GNSPermissionHandler permissionHandler) {
+                // Show your custom dialog here.
+                // Don't forget to call permissionHandler() with YES or NO when the user dismisses it.
+                NSLog(@"hihi nearby permission");
+                permissionHandler(YES);
+            };
             params.strategy = [GNSStrategy strategyWithParamsBlock:^(GNSStrategyParams *params) {
                 params.discoveryMediums = _isBLEOnly ? kGNSDiscoveryMediumsBLE : kGNSDiscoveryModeDefault;
             }];
@@ -231,6 +237,12 @@ RCT_EXPORT_METHOD(subscribe) {
         } messageLostHandler:^(GNSMessage *message) {
             [welf sendEvent:MESSAGE_LOST withMessage:message];
         } paramsBlock:^(GNSSubscriptionParams *params) {
+            params.permissionRequestHandler = ^(GNSPermissionHandler permissionHandler) {
+                // Show your custom dialog here.
+                // Don't forget to call permissionHandler() with YES or NO when the user dismisses it.
+                NSLog(@"hihi nearby permission");
+                permissionHandler(YES);
+            };
             params.strategy = [GNSStrategy strategyWithParamsBlock:^(GNSStrategyParams *params) {
                 params.allowInBackground = true; //TODO: Make this configurable
                 params.discoveryMediums = _isBLEOnly ? kGNSDiscoveryMediumsBLE : kGNSDiscoveryModeDefault;
