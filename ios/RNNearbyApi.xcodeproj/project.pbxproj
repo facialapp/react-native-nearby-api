@@ -105,6 +105,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 58B511D21A9E6C8500147676;
@@ -236,7 +237,7 @@
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
 					"$(PROJECT_DIR)/../../../ios/Frameworks/**",
-					"$(PROJECT_DIR)/../../../ios/Pods/**",
+					"$(PROJECT_DIR)/../../../ios/Pods/Headers/Public/**",
 					"$(SRCROOT)/Pods/**",
 					"$(SRCROOT)/../example/ios/Pods/Headers/Public/NearbyMessages",
 				);
@@ -261,7 +262,7 @@
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
 					"$(PROJECT_DIR)/../../../ios/Frameworks/**",
-					"$(PROJECT_DIR)/../../../ios/Pods/**",
+					"$(PROJECT_DIR)/../../../ios/Pods/Headers/Public/**",
 					"$(SRCROOT)/Pods/**",
 					"$(SRCROOT)/../example/ios/Pods/Headers/Public/NearbyMessages",
 				);

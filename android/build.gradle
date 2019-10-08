@@ -32,6 +32,6 @@ repositories {
 
 dependencies {
     compile 'com.facebook.react:react-native:+'
-    compile 'com.google.android.gms:play-services-nearby:10.2.4'
+    compile 'com.google.android.gms:play-services-nearby:15.0.0'
 }
   
